@@ -5,12 +5,13 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Mi Primer Formulario HTML</title>
+      <link rel="shortcut icon" href="img/formularios-de-google.png" type="png">
+    <title> Mi Primer Formulario HTML</title>
     <link rel="stylesheet" href="_css/estilos.css">
       
   <body>
     <div class="container">
-      <h1>📝 Formulario de Registro</h1>
+      <h1>📜 Formulario de Registro📜</h1>
 
       <!-- FORMULARIO HTML -->
       <form id="miFormulario">
@@ -25,6 +26,18 @@
             placeholder="Escribe tu nombre completo"
             autofocus
             pattern="[A-za-z ]{3,40}" />
+        </div>
+
+         <!-- Campo de fecha-nac -->
+        <div class="form-group">
+          <label for="start"> 📅 Fecha de nacimiento </label>
+          <input
+            type="date"
+            id="start"
+            name="fecha-nac"
+            required 
+        
+             />
         </div>
 
         <!-- Campo de email -->
@@ -44,7 +57,7 @@
           <input
             type="number"
             id="telefono"
-            placeholder="Ej:  +54 320 457 8962" />
+            placeholder="Ej:  +57 320 457 8962" />
         </div>
 
 
@@ -60,7 +73,7 @@
             required
             placeholder="Tu edad" />
         </div>
-
+        
         <!-- Campo de selección -->
         <div class="form-group">
           <label for="ciudad"> 🗺️ Ciudad:</label>
@@ -76,6 +89,37 @@
             <option value="otra">Otra</option>
           </select>
         </div>
+        <div>
+        <label for="name">Dirección de vivienda </label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            minlength="4"
+            maxlength="8"
+            size="10" 
+            placeholder="Ej: cra 4 #23-15"/>
+  </div>
+        <fieldset>
+  <legend>Genero</legend>
+
+  <div>
+    <input type="radio" id="scales" name="scales" radio />
+    <label for="scales">Femenino</label>
+  </div>
+
+  <div>
+    <input type="radio" id="scales" name="scales" radio />
+    <label for="horns">Masculino</label>
+  </div>
+   <div>
+   <input type="radio" id="scales" name="scales" radio />
+    <label for="horns">Otro</label>
+  </div>
+</fieldset>
+<br>
 
         <!-- Campos de radio -->
         <div class="form-group">
@@ -114,6 +158,7 @@
             >Avanzado</label
           >
         </div>
+        
 
         <!-- Checkbox -->
         <div class="form-group">
@@ -128,6 +173,8 @@
             Acepto los términos y condiciones
           </label>
         </div>
+    
+        
 
         <!-- Área de texto -->
         <div class="form-group">
@@ -184,14 +231,23 @@
               case 'nombre':
                 nombreCampo = 'Nombre completo';
                 break;
+             case 'fecha-nac':
+                nombreCampo = 'Fecha de nacimiento';
+                break;
               case 'email':
                 nombreCampo = 'Correo electrónico';
+                break;
+             case 'número':
+                nombreCampo = 'Número de contacto';
                 break;
               case 'edad':
                 nombreCampo = 'Edad';
                 break;
               case 'ciudad':
                 nombreCampo = 'Ciudad';
+                break;
+            case 'genero':
+                nombreCampo = 'Genero';
                 break;
               case 'experiencia':
                 nombreCampo = 'Experiencia en programación';
